@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Exam Key Generator</title>
+    <script>
+        // Student data from the CSV
+        const studentData = {
+            
+    "awah": { "Nursing": "awa202453nure" },
+    "balog": { "Nursing": "bal202448nure" },
+    "fonjo": { "Nursing": "fon202473nure" },
+    "kongnyuy": { "Nursing": "kon202400nure" },
+    "kudi": { "Nursing": "kud202476nure" },
+    "ledru": { "Medical Laboratory Sciences": "led202400mede" },
+    "mbiandun": { "Sciences Infirmieres": "mbi202463scif" },
+    "mbom": { "Nursing": "mbo202473nure" },
+    "metila": { "Nursing": "met202490nurf" },
+    "ndikum": { "Nursing": "ndi202439nure" },
+    "ngum": { "Midwifery": "ngu202447mide" },
+    "ova'a": { "Nursing": "ova202455nure" },
+    "simo": { "Medical Laboratory Sciences": "sim202488mede" },
+    "nkamenyi": { "Nursing": "nka202498nure" },
+    "nchotu": { "Nursing": "nch202400nure" },
+    "tchuembou": { "MLS": "tch202484mlse" },
+    "ananfa": { "Nursing": "ana202400nure" },
+    "bakwowi": { "Nursing": "bak202475nure" },
+    "song": { "Nursing": "son202400nure" },
+    "beyala": { "Nursing": "bey202461nure" },
+    "lincy": { "Nursing": "lin202494nure" },
+    "birwe": { "Nursing": "bir202470nurf" },
+    "mc eward": { "Nursing": "mc 202463nure" },
+    "young": { "Nursing": "you202435nure" },
+    "ondike": { "Midwifery": "ond202422mide" },
+    "kikwi": { "Midwifery": "kik202405mide" },
+    "presious": { "Nursing": "pre202420nure" },
+    "chiaka": { "Nursing": "chi202430nure" },
+    "etoundi": { "Nursing": "eto202400nure" },
+    "ban": { "Nursing": "ban202454nure" },
+    "yomi": { "Nursing": "yom202484nure" },
+    "nkouakep": { "Sage Femme": "nko202422sagf" },
+    "mamba": { "Pharmacy": "mam202423phae" },
+    "mugeh": { "Nursing": "mug202401nure" },
+    "bangwen": { "MLS": "ban202457mlse" },
+    "pangwa": { "MIT": "pan202453mite" },
+    "noukoua": { "Nursing": "nou202441nure" },
+    "achongwa": { "Nursing": "ach202446nure" },
+    "clareince": { "Laboratory tech": "cla202463labe" },
+    "asamyame": { "Radiology": "asa202498rade" },
+    "agbor": { "Nursing": "agb202491nure" },
+    "wondje": { "Nursing": "won202408nure" },
+    "mosama": { "Nursing": "mos202452nure" },
+    "ayuk-enow": { "Nursing": "ayu202456nure" },
+    "toh": { "Nursing": "toh202436nure" },
+    "neba": { "Nursing": "neb202423nure" },
+    "fehny": { "Nursing": "feh202427nure" },
+    "fofe": { "Nursing": "fof202454nure" },
+    "nyemb": { "Nursing": "nye202459nure" },
+    "aboudou": { "MLS": "abo202452mlse" },
+    "nga": { "Nursing": "nga202401nure" },
+    "kenmogne": { "Nursing": "ken202438nure" },
+    "ngong": { "Nursing": "ngo202495nure" },
+    "tayo": { "Radiology": "tay202498rade" },
+    "bong": { "Nursing": "bon202419nure" },
+    "tizee": { "Nursing": "tiz202493nure" },
+    "tchoh": { "MIT": "tch202469mite" },
+    "wain": { "Nursing": "wai202400nure" },
+    "azefack": { "Nursing": "aze202423nure" },
+    "ateyim": { "Pharmacy": "ate202420phae" },
+    "fuhnui": { "MLS": "fuh202481mlse" },
+    "lonkeng": { "Midwifery": "lon202428mide" },
+    "tendong": { "Nursing": "ten202450nure" },
+    "kinyuy": { "Nursing": "kin202400nurf" },
+    "nfor": { "Nursing": "nfo202400nurf" },
+    "wako": { "Soin infimier": "wak202429soie" },
+    "mebe": { "Soin infimier": "meb202454soif" },
+    "gribone": { "Nursing": "gri202404nure" },
+    "nsouanfouo": { "Pharmacy": "nso202496phae" },
+    "jeuro": { "Nursing": "jeu202400nure" },
+    "kwilauin": { "Nursing": "kwi202400nure" },
+    "dongue": { "Nursing": "don202400nure" },
+    "fongang": { "Nursing": "fon202426nure" },
+    "kien": { "Nursing": "kie202472nure" },
+    "fongane": { "Nursing": "fon202464nure" }
+
+        };
+
+        function generateKey() {
+            const name = document.getElementById("studentName").value;
+            const course = document.getElementById("courseName").value;
+            const keyDisplay = document.getElementById("studentKey");
+
+            if (studentData[name] && studentData[name][course]) {
+                keyDisplay.innerText = `Your Exam Key is FRQyFr and Your login id is: ${studentData[name][course]}`;
+            } else {
+                keyDisplay.innerText = "No key found for the selected name and course combination.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Student Exam Key Generator</h1>
+    <p>Select your name and course to retrieve your exam key and Login ID.</p>
+
+    <label for="studentName">Select Your Name:</label>
+    <select id="studentName">
+        <option value="awah">awah</option>
+<option value="balog">balog</option>
+<option value="fonjo">fonjo</option>
+<option value="kongnyuy">kongnyuy</option>
+<option value="kudi">kudi</option>
+<option value="ledru">ledru</option>
+<option value="mbiandun">mbiandun</option>
+<option value="mbom">mbom</option>
+<option value="metila">metila</option>
+<option value="ndikum">ndikum</option>
+<option value="ngum">ngum</option>
+<option value="ova'a">ova'a</option>
+<option value="simo">simo</option>
+<option value="nkamenyi">nkamenyi</option>
+<option value="nchotu">nchotu</option>
+<option value="tchuembou">tchuembou</option>
+<option value="ananfa">ananfa</option>
+<option value="bakwowi">bakwowi</option>
+<option value="song">song</option>
+<option value="beyala">beyala</option>
+<option value="lincy">lincy</option>
+<option value="birwe">birwe</option>
+<option value="mc eward">mc eward</option>
+<option value="young">young</option>
+<option value="ondike">ondike</option>
+<option value="kikwi">kikwi</option>
+<option value="presious">presious</option>
+<option value="chiaka">chiaka</option>
+<option value="etoundi">etoundi</option>
+<option value="ban">ban</option>
+<option value="yomi">yomi</option>
+<option value="nkouakep">nkouakep</option>
+<option value="mamba">mamba</option>
+<option value="mugeh">mugeh</option>
+<option value="bangwen">bangwen</option>
+<option value="pangwa">pangwa</option>
+<option value="noukoua">noukoua</option>
+<option value="achongwa">achongwa</option>
+<option value="clareince">clareince</option>
+<option value="asamyame">asamyame</option>
+<option value="agbor">agbor</option>
+<option value="wondje">wondje</option>
+<option value="mosama">mosama</option>
+<option value="ayuk-enow">ayuk-enow</option>
+<option value="toh">toh</option>
+<option value="neba">neba</option>
+<option value="fehny">fehny</option>
+<option value="fofe">fofe</option>
+<option value="nyemb">nyemb</option>
+<option value="aboudou">aboudou</option>
+<option value="nga">nga</option>
+<option value="kenmogne">kenmogne</option>
+<option value="ngong">ngong</option>
+<option value="tayo">tayo</option>
+<option value="bong">bong</option>
+<option value="tizee">tizee</option>
+<option value="tchoh">tchoh</option>
+<option value="wain">wain</option>
+<option value="azefack">azefack</option>
+<option value="ateyim">ateyim</option>
+<option value="fuhnui">fuhnui</option>
+<option value="lonkeng">lonkeng</option>
+<option value="tendong">tendong</option>
+<option value="kinyuy">kinyuy</option>
+<option value="nfor">nfor</option>
+<option value="wako">wako</option>
+<option value="mebe">mebe</option>
+<option value="gribone">gribone</option>
+<option value="nsouanfouo">nsouanfouo</option>
+<option value="jeuro">jeuro</option>
+<option value="kwilauin">kwilauin</option>
+<option value="dongue">dongue</option>
+<option value="fongang">fongang</option>
+<option value="kien">kien</option>
+<option value="fongane">fongane</option>
+
+    </select>
+    <br><br>
+
+    <label for="courseName">Select Your Course/Department:</label>
+    <select id="courseName">
+        <option value="">--Select Your Course--</option>
+        <option value="Pharmacy">Pharmacy</option>
+<option value="Radiology">Radiology</option>
+<option value="Sage Femme">Sage Femme</option>
+<option value="Soin infimier">Soin infimier</option>
+<option value="Nursing">Nursing</option>
+<option value="Medical Laboratory Sciences">Medical Laboratory Sciences</option>
+<option value="MIT">MIT</option>
+<option value="Laboratory tech">Laboratory tech</option>
+<option value="Midwifery">Midwifery</option>
+<option value="Sciences Infirmieres">Sciences Infirmieres</option>
+<option value="MLS">MLS</option>
+
+    </select>
+    <br><br>
+
+    <button onclick="generateKey()">Get Exam Key</button>
+
+    <p id="studentKey" style="margin-top: 20px; font-weight: bold;"></p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Exam</title>
+</head>
+<body>
+    <h1>Start Your MOCK Exam</h1>
+    <p>Follow the steps below to start your Practice test:</p>
+    <ol>
+        <li>Generate your unique exam key and login ID using the form above.</li>
+        <li> clicking the button below to start the Practice test:</li>
+    </ol>
+    <a href="https://exam.net/" target="_blank">
+        <button style="padding: 10px 20px; font-size: 16px;">Take Practice Test </button>
+    </a>
+    <p>
+        <strong>Note:</strong> Enter your generated exam key and login ID in the provided fields to start the Practice test. This test is for your practice only Total Time 25 Minutes 
+    </p>
+</body>
+</html>
+
