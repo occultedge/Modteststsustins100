@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Exam Key Generator</title>
+    <title>Student LOgin ID Generator</title>
     <script>
         // Student data from the CSV
         const studentData = {
@@ -92,16 +92,16 @@
             const keyDisplay = document.getElementById("studentKey");
 
             if (studentData[name] && studentData[name][course]) {
-                keyDisplay.innerText = `Your Exam Key is FRQyFr and Your login id is: ${studentData[name][course]}`;
+                keyDisplay.innerText = `Your login id is: ${studentData[name][course]}`;
             } else {
-                keyDisplay.innerText = "No key found for the selected name and course combination.";
+                keyDisplay.innerText = "No ID found for the selected name and course combination.";
             }
         }
     </script>
 </head>
 <body>
     <h1>Student Exam Key Generator</h1>
-    <p>Select your name and course to retrieve your exam key and Login ID.</p>
+    <p>Select your name and course to retrieve your Login ID.</p>
 
     <label for="studentName">Select Your Name:</label>
     <select id="studentName">
@@ -218,14 +218,14 @@
     <h1>Start Your MOCK Exam</h1>
     <p>Follow the steps below to start your Practice test:</p>
     <ol>
-        <li>Generate your unique exam key and login ID using the form above.</li>
+        <li>Generate your unique login ID using the form above.</li>
         <li> clicking the button below to start the Practice test:</li>
     </ol>
-    <a href="https://exam.net/" target="_blank">
+    <a href="https://exam.net/student?examkey=FRQyFr" target="_blank">
         <button style="padding: 10px 20px; font-size: 16px;">Take Practice Test </button>
     </a>
     <p>
-        <strong>Note:</strong> Enter your generated exam key and login ID in the provided fields to start the Practice test. This test is for your practice only Total Time 25 Minutes 
+        <strong>Note:</strong> Enter yourlogin ID in the provided field to start the Practice test. This test is for your practice only Total Time 25 Minutes 
     </p>
 </body>
 </html>
