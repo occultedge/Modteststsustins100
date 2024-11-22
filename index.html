@@ -1,15 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student LOgin ID Generator</title>
+    <title>Student Login ID Generator for English section and 1 year Online Course </title>
     <script>
         // Student data from the CSV
         const studentData = {
-            
-    {
-    "aboudou": { "Nursing": "abo51nure" },
+             "aboudou": { "Nursing": "abo51nure" },
     "achille": { "Pharmacy": "ach19phar" },
     "achongwa": { "MLS": "ach46mls" },
     "aichatou": { "Nursing": "aic55nure" },
@@ -96,30 +95,45 @@
     "wain": { "Nursing": "wai00nure" },
     "awafong": { "MIT": "awa59mit" },
     "yomi": { "Nursing": "yom84nure" },
-    "zoa": { "MLS": "zoa34mls" }
+    "zoa": { "MLS": "zoa34mls" },
+   "sinjinge": { "OCA": "si20ocae" },
+    "mbom": { "OCA": "mb13ocae" }
 
+            // Add remaining data...
         };
 
         function generateKey() {
-            const name = document.getElementById("studentName").value;
-            const course = document.getElementById("courseName").value;
-            const keyDisplay = document.getElementById("studentKey");
+    const name = document.getElementById("studentName").value;
+    const course = document.getElementById("courseName").value;
+    const keyDisplay = document.getElementById("studentKey");
+    const examButton = document.getElementById("examButton"); // Reference to the button/link
 
-            if (studentData[name] && studentData[name][course]) {
-                keyDisplay.innerText = `Your login id is: ${studentData[name][course]}`;
-            } else {
-                keyDisplay.innerText = "No ID found for the selected name and course combination.";
-            }
-        }
+    if (!name || !course) {
+        keyDisplay.innerText = "Please select both name and course.";
+        examButton.style.display = "none"; // Hide the button if inputs are invalid
+        return;
+    }
+
+    if (studentData[name] && studentData[name][course]) {
+        keyDisplay.innerText = `Success! Your login id is: ${studentData[name][course]}. Please ensure you enter this login ID correctly on the next page to avoid disqualification. Click below to start your exam Now`;
+        examButton.style.display = "block"; // Show the button
+    } else {
+        keyDisplay.innerText = "No ID found for the selected name and course combination.";
+        examButton.style.display = "none"; // Hide the button if no ID is found
+    }
+}
+
+  
     </script>
 </head>
 <body>
     <h1>Student Exam Key Generator</h1>
-    <p>Select your name and course to retrieve your Login ID.</p>
+    <p>Select Your Name and Course to retrieve your Login ID.</p>
 
     <label for="studentName">Select Your Name:</label>
     <select id="studentName">
-        <option value="aboudou">aboudou</option>
+        <option value="">--Select Your Name--</option>
+         <option value="aboudou">aboudou</option>
 <option value="achille">achille</option>
 <option value="achongwa">achongwa</option>
 <option value="aichatou">aichatou</option>
@@ -207,52 +221,49 @@
 <option value="awafong">awafong</option>
 <option value="yomi">yomi</option>
 <option value="zoa">zoa</option>
+<option value="sinjinge">sinjinge</option>
+<option value="mbom">mbom</option>
 
-
+        <!-- Add remaining options -->
     </select>
     <br><br>
 
     <label for="courseName">Select Your Course/Department:</label>
     <select id="courseName">
         <option value="">--Select Your Course--</option>
-      <option value="Nursing">Nursing</option>
-<option value="Pharmacy">Pharmacy</option>
-<option value="MLS (Medical Laboratory Sciences)">MLS (Medical Laboratory Sciences)</option>
-<option value="Radiology">Radiology</option>
-<option value="Midwifery">Midwifery</option>
-<option value="Laboratory tech">Laboratory tech</option>
-<option value="Dental therapy">Dental therapy</option>
-<option value="MIT (Medical Imaging Technology)">MIT (Medical Imaging Technology)</option>
-
+        <option value="Nursing">Nursing</option>
+        <option value="Pharmacy">Pharmacy</option>
+        <option value="MLS">MLS (Medical Laboratory Sciences)</option>
+        <option value="Radiology">Radiology</option>
+        <option value="Midwifery">Midwifery</option>
+        <option value="Laboratory tech">Laboratory tech</option>
+        <option value="Dental therapy">Dental therapy</option>
+        <option value="MIT">MIT (Medical Imaging Technology)</option>
+        <option value="OCA">Online Session - Care assistance (First Aid)</option>
 
     </select>
     <br><br>
 
-    <button onclick="generateKey()">Get Exam login ID </button>
+    <button onclick="generateKey()">Get Exam Login ID</button>
 
     <p id="studentKey" style="margin-top: 20px; font-weight: bold;"></p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start Your Exam</title>
-</head>
-<body>
-    <h1>Start Your MOCK Exam</h1>
-    <p>Follow the steps below to start your Practice test:</p>
-    <ol>
-        <li>Generate your unique login ID using the form above.</li>
-        <li> clicking the button below to start the Practice test:</li>
-    </ol>
-    <a href="https://exam.net/student?examkey=FRQyFr" target="_blank">
-        <button style="padding: 10px 20px; font-size: 16px;">Take Practice Test </button>
-    </a>
-    <p>
-        <strong>Note:</strong> Enter yourlogin ID in the provided field to start the Practice test. Please note this step is mandatory for your test to be considered for checking.  This test is for your practice only Total Time 25 Minutes 
-    </p>
-</body>
-</html>
+  
 
+
+    </button>
+   
+</a>
+<p id="studentKey" style="margin-top: 20px; font-weight: bold;"></p>
+
+<!-- Hidden button for taking the exam -->
+<p id="examButton" style="display: none; margin-top: 20px;">
+    <a href="https://exam.net/student?examkey=qu8SWD" target="_blank">
+        <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+            Take Practice Exam Now
+        </button>
+    </a>
+</p>
+
+
+</body>
+</html>
