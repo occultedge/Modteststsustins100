@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login ID Generator for English section and 1 year Online Course </title>
+    <title>Student Login ID Roll Number Generator for Test  </title>
     <script>
         // Student data from the CSV
         const studentData = {
@@ -115,7 +115,7 @@
     }
 
     if (studentData[name] && studentData[name][course]) {
-        keyDisplay.innerText = `Success! Your login id is: ${studentData[name][course]}. Please ensure you enter this Occultedge LOgin ID Roll Number correctly on the Examination page to avoid disqualification.`;
+        keyDisplay.innerText = `Success! Your login id is: ${studentData[name][course]}. Please ensure you enter this Occultedge Login ID Roll Number correctly on the Examination page to avoid disqualification.`;
         examButton.style.display = "block"; // Show the button
     } else {
         keyDisplay.innerText = "No ID found for the selected name and course combination.";
