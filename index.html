@@ -115,7 +115,7 @@
     }
 
     if (studentData[name] && studentData[name][course]) {
-        keyDisplay.innerText = `Success! Your login id is: ${studentData[name][course]}. Please ensure you enter this login ID correctly on the next page to avoid disqualification. Click below to start your exam Now`;
+        keyDisplay.innerText = `Success! Your login id is: ${studentData[name][course]}. Please ensure you enter this Occultedge LOgin ID Roll Number correctly on the Examination page to avoid disqualification.`;
         examButton.style.display = "block"; // Show the button
     } else {
         keyDisplay.innerText = "No ID found for the selected name and course combination.";
@@ -127,7 +127,7 @@
     </script>
 </head>
 <body>
-    <h1>Student Login ID Generator for English section and 1 year Online Course</h1>
+    <h1>Student Roll No.  ID Generator for English section and 1 year Online Course</h1>
     <p>Select Your Name and Course to retrieve your Login ID.</p>
 
     <label for="studentName">Select Your Name:</label>
@@ -244,7 +244,7 @@
     </select>
     <br><br>
 
-    <button onclick="generateKey()">Get Exam Login ID</button>
+    <button onclick="generateKey()">Get Exam Roll No.</button>
 
     <p id="studentKey" style="margin-top: 20px; font-weight: bold;"></p>
   
@@ -257,9 +257,7 @@
 
 <!-- Hidden button for taking the exam -->
 <p id="examButton" style="display: none; margin-top: 20px;">
-    <a href="https://exam.net/student?examkey=qu8SWD" target="_blank">
-        <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
-            Take Practice Exam Now
+  
         </button>
     </a>
 </p>
